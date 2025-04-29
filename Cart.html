@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- start google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--end google fonts -->
+    <!-- start fontawesome -->
+    <link rel="stylesheet" href="../detalis/fontawesome-free-6.7.1-web/css/all.min.css">
+    <!-- end fontawesome -->
+     <!-- start links_Slider -->
+    <link rel="stylesheet" href="../detalis/js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../detalis/js/slick-1.8.1/slick/slick-theme.css">
+     <!-- end links_Slider -->
+     <link rel="stylesheet" href="../detalis/WOW-master/css/libs/animate.css">
+    <link rel="stylesheet" href="../detalis/css/style.css">
+    <style>
+        
+       
+        /* حاوية الصفحة الرئيسية */
+        .cart-container {
+          width: 90%;
+          margin: 50px auto;
+          background-color: #8a8a8a;
+          padding: 20px;
+          border-radius: 15px ;
+          color: #eebf00;
+        }
+    
+        /* عنوان الصفحة */
+        .cart-container h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+    
+        /* تنسيق الجدول */
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+        }
+    
+        table thead {
+          background-color: #ffffff;
+        }
+    
+        table thead th {
+          padding: 10px;
+          text-align: left;
+        }
+    
+        table tbody tr {
+          border-bottom: 1px solid #dddddd;
+        }
+    
+        table tbody td {
+          padding: 10px;
+          vertical-align: middle;
+        }
+    
+        /* تنسيق حقل الإدخال (الكمية) */
+        input[type="number"] {
+          width: 60px;
+          padding: 5px;
+          color: #eebf00;
+        }
+    
+        /* صورة المنتج */
+        .product-img {
+          width: 140px;
+          height: auto;
+        }
+    
+        /* الأزرار */
+        .btn {
+          display: inline-block;
+          padding: 8px 12px;
+          cursor: pointer;
+          border: none;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+    
+        .btn-danger {
+          background-color: rgb(255, 255, 255);
+          color: #eebf00;
+        }
+    
+        /* زر إزالة جميع المنتجات */
+        .remove-all-btn {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+    
+        /* قسم المجموع النهائي */
+        .total-section {
+          text-align: end;
+        }
+    
+        .total-section h4 {
+          margin: 0;
+        }
+      </style>
+</head>
+<body>
+<!-- start nav -->
+
+ <nav>
+      <!-- start top_nav -->
+    <div class="top_nav">
+     <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+     </div>
+     <div class="login">
+        <div>
+            <i class="fa-solid fa-user"></i>
+            <span>login</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span>Regester Now</span>
+        </div>
+
+
+     </div>
+     <i class="fa-solid fa-bars"></i>
+
+    </div>
+      <!-- end top_nav -->
+
+      <!-- start down_nav -->
+       <div class="down_nav">
+   <div class="top">
+    <div class="detalise">
+        <img src="../detalis/data/icons/phone-2.svg">
+        <div>
+            <b>Call Us:(+20)1885697233 </b>
+            <span>E-mail:example@gmail.com</span>
+        </div>
+     </div>
+    <img src="../detalis/data/icons/logo.svg" alt="" class="img_top">
+     <div class="detalise">
+        <img src="../detalis/data/icons/clock.svg">
+        <div>
+            <b>WorkingHors </b>
+            <p>Sun-Wen(3.00pm - 6.00pm)</p>
+        </div>
+     </div>
+   </div>
+   <ul>
+    <li>
+        <a href="index.html" >Home </a>
+    </li>
+    <li>
+        <a href="#ِAbout" >Abot US </a>
+    </li>
+    <li>
+        <a href="#Our" >Our Services </a>
+    </li>
+    <li>
+        <a href="products.html" >Products </a>
+    </li>
+    <li>
+        <a href="Cart.html" class="active">Cart </a>
+    </li>
+    <li>
+        <a href="#Blog" >Blogs </a>
+    </li>
+    <li>
+        <a href="#conts">contact Us </a>
+    </li>
+   </ul>
+
+       </div>
+      <!-- end down_nav -->
+  
+
+ </nav>
+<!-- end nav -->
+
+<!-- cart -->
+
+<div class="container_Cart"> </div>
+
+  <div class="cart-container">
+    <h2>Shopping Cart</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product Name</th>
+          <th>Unit Price</th>
+          <th>Total</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody class="body_cart">
+      
+      </tbody>
+    </table>
+
+    <button class="btn btn-danger remove-all-btn delete_all">Remove All Products</button>
+
+    <div class="total-section">
+      <h4>Total Cart: $<span class="total_cart" id="total">70</span></h4>
+    </div>
+  </div>
+
+<!-- cart -->   
+
+ <!--start  end_sec_container -->
+<div class="end_sec_container" >
+    <div class="card">
+        <div>
+            <b>About US</b>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ea non voluptas! Voluptatem  Fugiat!</p>
+            <button>Read More</button>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <b>Quik links</b>
+        </div>
+        <div>
+            <ul>
+                <li>
+                <a href="index.html" class="active">Home </a>
+                </li>
+                <li>
+                    <a href="#ِAbout">Abot US </a>
+                </li>
+                <li>
+                    <a href="#Our">Our Services </a>
+                </li>
+                <li>
+                 <a href="products.html" >Products </a>
+                </li>
+                <li>
+                    <a href="#Blog">Blogs </a>
+                </li>
+                <li>
+                    <a href="#conts">contact Us </a>
+                </li>
+               </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <b>Follow Us</b>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <i><i class="fa-brands fa-facebook-f"></i></i>
+                    <a href="index.html" class="active" >Home </a>
+                </li>
+                <li>
+                    <i><i class="fa-brands fa-twitter"></i></i>
+                    <a href="#ِAbout">Abot US </a>
+                </li>
+                <li>
+                    <i><i class="fa-brands fa-goodreads-g"></i></i>
+                    <a href="#Our">Our Services </a>
+                </li>
+                <li>
+                    <i><i class="fa-brands fa-instagram"></i></i>
+                    <a href="products.html">Products </a>
+                </li>
+        
+               </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <b>Gallery</b>
+        </div>
+
+        <div class="div_img">
+                <img src="../detalis/data/imags/food-table.jpg" alt="">
+                <img src="../detalis/data/imags/food-table.jpg" alt="">
+                <img src="../detalis/data/imags/food-table.jpg" alt="">
+                <img src="../detalis/data/imags/food-table.jpg" alt="">        
+                <img src="../detalis/data/imags/food-table.jpg" alt="">                       
+                <img src="../detalis/data/imags/food-table.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!--end  end_sec_container -->
+
+<!-- start cart -->
+<div class="cart " >
+    <b>Your <span>Cart</span></b>
+    <div class="container_Cart">
+     
+    </div>
+    <div class="totall">
+        <b >Totall</b>
+        <b class="totelCart">$0.00</b>
+    </div>
+    <i class="fa-regular fa-circle-xmark"></i>
+</div>
+<!-- end cart -->
+
+<!-- start button with remove or add product in the cart -->
+<div class="div_del_add">
+    <div>
+        <button class="btns sure">sure</button>
+        <button class="btns No">No</button>
+    
+    </div>
+</div>
+<!-- end button with  remove or add product in the cart -->
+
+<!-- start photo check add product -->
+<div class="ahmed">
+    <div class="container_check">
+        <i class="fa-regular fa-circle-xmark"></i>
+            <p>Your Products <span class="TitleName">()</span>add to cart successfuly</p>
+            <div>
+                <i class="fa-regular fa-circle-check "></i>
+
+            </div>
+    
+    </div>
+</div>
+<!-- end photo check add product -->
+
+
+
+<i class="fa-solid fa-arrow-up"></i>
+<script src="../detalis/WOW-master/dist/wow.min.js"></script>
+<script>
+// new WOW().init();
+</script>
+<script src="../detalis/js/jequery.js"></script>
+<script src="../detalis/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../detalis/js/Cart.js"></script>
+</body>
+</html>
