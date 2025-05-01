@@ -69,11 +69,15 @@ for(var i = 0 ; i < btns.length ; i++){
 }
 
 document.onscroll = function(){
+  console.log(scrollY);
   
   if(window.scrollY < 500){
+
     toTop.style.display = 'none'
+    toTop.style.opacity = '0'
   }else{
     toTop.style.display = 'flex'
+    toTop.style.opacity = '1'
   }
 
   if(window.scrollY > 0){
