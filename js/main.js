@@ -69,7 +69,6 @@ for(var i = 0 ; i < btns.length ; i++){
 }
 
 document.onscroll = function(){
-  console.log(scrollY);
   
   if(window.scrollY < 500){
 
